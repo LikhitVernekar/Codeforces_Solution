@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    string s;
+    string t;
+    cin>>s>>t;
+    int k=t.size();
+    int n=s.size();
+    int ans=0;
+for(int i=0;i<=(s.size())-1;i++){
+    if(s[i]==t[(s.size())-i-1]){
+        ans++;
+    }
+}
+if(ans==n && ans==k){
+    cout<<"YES";
+}
+else{
+    cout<<"NO";
+}
+    return 0;
+}
