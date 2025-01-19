@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t; // Number of test cases
+
+    while (t--) {
+        long long a, b;
+        cin >> a >> b;
+
+        // Calculate the remainder when a is divided by b
+        long long remainder = a % b;
+
+        // If remainder is 0, a is already divisible by b
+        if (remainder == 0) {
+            cout << 0 << endl;
+        } else {
+            // Otherwise, we need to add (b - remainder) to make a divisible by b
+            cout << b - remainder << endl;
+        }
+    }
+
+    return 0;
+}
