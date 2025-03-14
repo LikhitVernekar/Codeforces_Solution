@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+   string s;
+   cin>>s;
+   int freq[26]={0};
+   int counter=0;
+   for(char c :s){
+       if(freq[c-'a']==0){
+           counter++;
+       }
+       freq[c- 'a']++;
+   }
+if(counter%2==0){
+    cout<<"CHAT WITH HER!";
+}
+else{
+    cout<<"IGNORE HIM!";
+}
+    return 0;
+}
+
+OR
+
+#include <iostream>
+#include <unordered_set>
+using namespace std;
+int main()
+{
+string s;
+cin>>s;
+// int unique=0;
+unordered_set<char> unique(s.begin(),s.end());
+if(unique.size() %2==0){
+    cout<<"CHAT WITH HER!";
+}
+else{
+    cout<<"IGNORE HIM!";
+}
+    return 0;
+}
