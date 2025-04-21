@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int s,m=0,c=0;
+    cin>>s;
+    int a[s],b[s];
+for(int i=0;i<s;i++){
+    cin>>a[i]>>b[i]; 
+    m=m-a[i]+b[i];
+    if(m>c){
+       c=m;
+    }    
+}
+cout<<c; 
+}
