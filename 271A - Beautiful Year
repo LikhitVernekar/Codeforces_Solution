@@ -1,0 +1,20 @@
+#include <iostream>
+#include <set>
+using namespace std;
+
+    bool ifEqual(int year){
+        string s = to_string(year);
+        set <char> digit(s.begin(),s.end());
+        return digit.size()==s.size();
+    }
+    int main(){
+    int y;
+    cin>>y;
+    while(true){
+        y++;
+        if(ifEqual(y)){
+            cout<<y<<endl;
+            break;
+        }    
+    }
+}
